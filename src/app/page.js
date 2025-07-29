@@ -1,6 +1,6 @@
 export default function Home() {
   return (
-    <div className="font-sans flex items-center justify-center min-h-screen p-8">
+    <div className="font-sans flex items-center justify-center min-h-[calc(100vh-4rem)] p-8">
       <main className="text-center">
         <h1 className="text-4xl sm:text-6xl font-bold mb-4 text-gray-900 dark:text-white">
           The Gena Initiative
