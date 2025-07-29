@@ -1,3 +1,5 @@
+'use client';
+
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -42,7 +44,7 @@ export default function Header() {
             </Link>
             <Link 
               href="/donate" 
-              className="bg-blue-600 text-white hover:bg-blue-700 px-4 py-2 rounded-md text-sm font-medium transition-colors duration-200"
+              className="bg-[#1e3a5f] text-white hover:bg-[#1e3a5f] px-4 py-2 rounded-md text-sm font-medium transition-colors duration-200"
             >
               Donate
             </Link>
