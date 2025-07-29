@@ -1,9 +1,11 @@
 import Hero from '../components/Hero';
+import About from '@/components/About';
 
 export default function Home() {
   return (
     <main>
       <Hero />
+      <About />
       {/* Additional sections can be added here */}
       <div className="min-h-screen bg-white flex items-center justify-center">
         <div className="text-center p-8">
