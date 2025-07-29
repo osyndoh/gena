@@ -1,5 +1,6 @@
 import Hero from '../components/Hero';
 import About from '@/components/About';
+import Contact from '@/components/Contact';
 import Projects from '@/components/Projects';
 
 export default function Home() {
@@ -8,6 +9,7 @@ export default function Home() {
       <Hero />
       <About />
       <Projects />
+      <Contact />
       {/* Additional sections can be added here */}
       <div className="min-h-screen bg-white flex items-center justify-center">
         <div className="text-center p-8">
