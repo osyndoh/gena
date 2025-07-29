@@ -84,7 +84,7 @@ const ProjectsSection = ({ projects }) => {
       {/* Scrollable container for project cards */}
       <div
         ref={scrollContainerRef} // Attach ref to this div for scrolling
-        className="flex overflow-x-auto snap-x snap-mandatory pb-4 space-x-4 px-2 sm:px-4 lg:px-6 scrollbar-hide "
+        className="flex overflow-x-auto snap-x snap-mandatory content-center pb-4 pt-4 space-x-4 px-2 sm:px-4 lg:px-6 scrollbar-hide"
         // Custom scrollbar hide for better aesthetics (might need a custom CSS utility for full browser support)
         style={{ scrollBehavior: 'smooth' }} // Smooth scrolling for manual drag
       >
@@ -117,7 +117,7 @@ const ProjectCard = ({ project, onClick, isSelected, isAnyProjectSelected }) => 
     cursor-pointer transform transition-all duration-300 ease-in-out
     snap-center
     ${isSelected
-      ? 'scale-105 shadow-xl ring-4 ring-blue-500 ring-opacity-70' // Highlight selected project
+      ? 'scale-105 shadow-xl ring-4 ring-[#1e3a5f] ring-opacity-70' // Highlight selected project
       : isAnyProjectSelected
         ? 'opacity-60 scale-95' // Fade and slightly shrink non-selected projects when one is active
         : 'hover:scale-105 hover:shadow-xl' // Normal hover effect when no project is selected
@@ -157,7 +157,7 @@ const ProjectCard = ({ project, onClick, isSelected, isAnyProjectSelected }) => 
 // Displays the detailed description of a selected project.
 const ProjectDescription = ({ project }) => {
   return (
-    <div className="mt-8 p-6 bg-white rounded-lg shadow-xl max-w-4xl mx-auto border-t-4 border-blue-500 animate-fade-in">
+    <div className="mt-8 p-6 bg-white rounded-lg shadow-xl max-w-7xl mx-auto border-t-2 animate-fade-in">
       <h3 className="text-2xl font-bold text-gray-900 mb-4">
         {project.title}
       </h3>
