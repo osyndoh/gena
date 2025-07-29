@@ -1,5 +1,5 @@
 'use client'
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 
 // Main App component to demonstrate the ProjectsSection
 const Projects = () => {
@@ -58,7 +58,27 @@ const Projects = () => {
 // Displays a horizontally scrollable list of projects with interactive features.
 const ProjectsSection = ({ projects }) => {
   const [selectedProject, setSelectedProject] = useState(null); // State to track the currently selected project
+  const [showDescription, setShowDescription] = useState(false); // State to control description visibility for animation
   const scrollContainerRef = useRef(null); // Ref for the scrollable project container
+
+  // useEffect to manage the animation state for the description
+  useEffect(() => {
+    if (selectedProject) {
+      // When a project is selected, immediately set to show description
+      setShowDescription(true);
+      // Scroll the projects section to the top of the page smoothly
+      if (scrollContainerRef.current) {
+        scrollContainerRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    } else {
+      // When no project is selected, hide the description after a short delay
+      // This delay allows the fade-out animation to complete before the content collapses
+      const timer = setTimeout(() => {
+        setShowDescription(false);
+      }, 300); // This duration should match the CSS transition duration
+      return () => clearTimeout(timer); // Cleanup the timer if component unmounts or state changes
+    }
+  }, [selectedProject]); // Re-run this effect whenever selectedProject changes
 
   // Function to handle project card clicks
   const handleProjectClick = (project) => {
@@ -68,10 +88,6 @@ const ProjectsSection = ({ projects }) => {
     } else {
       // Otherwise, select the new project
       setSelectedProject(project);
-      // Scroll the projects section to the top of the page smoothly
-      if (scrollContainerRef.current) {
-        scrollContainerRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
     }
   };
 
@@ -99,10 +115,12 @@ const ProjectsSection = ({ projects }) => {
         ))}
       </div>
 
-      {/* Project Description Section - conditionally rendered */}
-      {selectedProject && (
-        <ProjectDescription project={selectedProject} />
-      )}
+      {/* Project Description Section - always rendered but animated via max-height and opacity */}
+      {/* Only pass the project data if a project is selected, even if it's fading out */}
+      <ProjectDescription
+        project={selectedProject}
+        isVisible={showDescription}
+      />
     </section>
   );
 };
@@ -154,25 +172,39 @@ const ProjectCard = ({ project, onClick, isSelected, isAnyProjectSelected }) => 
 };
 
 // ProjectDescription Component
-// Displays the detailed description of a selected project.
-const ProjectDescription = ({ project }) => {
+// Displays the detailed description of a selected project with smooth reveal/hide.
+const ProjectDescription = ({ project, isVisible }) => {
+  if (!project && !isVisible) {
+    return null;
+  }
+
+  const descriptionClasses = `
+    mt-8 p-6 bg-white rounded-lg shadow-xl max-w-7xl mx-auto border-t-2 border-[#1e3a5f]
+    overflow-hidden transition-all duration-300 ease-in-out
+    ${isVisible ? 'opacity-100 max-h-[1000px] py-6' : 'opacity-0 max-h-0 py-0'}
+  `;
+
   return (
-    <div className="mt-8 p-6 bg-white rounded-lg shadow-xl max-w-7xl mx-auto border-t-2 animate-fade-in">
-      <h3 className="text-2xl font-bold text-gray-900 mb-4">
-        {project.title}
-      </h3>
-      <p className="text-gray-700 leading-relaxed mb-6">
-        {project.description}
-      </p>
-      {/* Button to redirect to the full project page */}
-      <a
-        href={project.projectPageUrl}
-        className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full transition-colors duration-300 shadow-md hover:shadow-lg"
-        target="_blank" // Opens in a new tab
-        rel="noopener noreferrer" // Security best practice for target="_blank"
-      >
-        View Full Project
-      </a>
+    <div className={descriptionClasses}>
+      {/* Only render content if a project is selected (even if it's currently fading out) */}
+      {project && (
+        <>
+          <h3 className="text-2xl font-bold text-gray-900 mb-4">
+            {project.title}
+          </h3>
+          <p className="text-gray-700 leading-relaxed mb-6">
+            {project.description}
+          </p>
+          <a
+            href={project.projectPageUrl}
+            className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full transition-colors duration-300 shadow-md hover:shadow-lg"
+            target="_blank" // Opens in a new tab
+            rel="noopener noreferrer" // Security best practice for target="_blank"
+          >
+            View Full Project
+          </a>
+        </>
+      )}
     </div>
   );
 };
