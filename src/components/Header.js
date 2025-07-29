@@ -25,25 +25,25 @@ export default function Header() {
           {/* Navigation Menu */}
           <nav className="hidden md:flex items-center space-x-8">
             <Link 
-              href="/about" 
+              href="#" 
               className="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium transition-colors duration-200"
             >
               About
             </Link>
             <Link 
-              href="/projects" 
+              href="#" 
               className="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium transition-colors duration-200"
             >
               Projects
             </Link>
             <Link 
-              href="/contact" 
+              href="#" 
               className="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium transition-colors duration-200"
             >
               Contact
             </Link>
             <Link 
-              href="/donate" 
+              href="#" 
               className="bg-[#1e3a5f] text-white hover:bg-[#1e3a5f] px-4 py-2 rounded-md text-sm font-medium transition-colors duration-200"
             >
               Donate
