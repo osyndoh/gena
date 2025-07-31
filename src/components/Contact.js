@@ -26,7 +26,7 @@ const ContactSection = () => {
       </p>
 
       {/* Contact Icons Container */}
-      <div className="flex justify-center items-start space-x-8 sm:space-x-12">
+      <div className="flex flex-wrap justify-center items-center gap-8 sm:gap-12">
         {/* Email Link */}
         <ContactLink
           icon={
