@@ -11,7 +11,7 @@ const Projects = () => {
       title: 'ZODIA Academy',
       subtitle: 'Zonal Omics Data & Intelligent Analytics Academy',
       description: 'ZODIA Academy is GENA’s flagship training institution dedicated to building Africa’s next generation of computational biologists, bioinformaticians, and pathogen genomics specialists. With a hands-on, problem-solving approach, the Academy offers tailored courses in genomics, AI in public health, molecular epidemiology, and data-driven outbreak response. It bridges the gap between scientific knowledge and real-world public health challenges through mentorship, practical experience, and global collaboration.',
-      projectPageUrl: '/projects/community-garden',
+      projectPageUrl: '#',
     },
     {
       id: 'STEMA AI',
@@ -19,23 +19,23 @@ const Projects = () => {
       title: 'STEMA AI',
       subtitle: 'Science, Technology, Engineering, Mathematics & AI for Africa',
       description: 'STEMA AI is an ambitious, pan-African initiative to democratize access to cutting-edge AI tools for STEM learning and research. Focused on primary to post-graduate education, STEMA AI develops adaptive learning platforms, intelligent tutors, and STEM content pipelines rooted in African contexts. At its core, STEMA AI believes in building a tech-literate generation capable of shaping the continent’s scientific destiny.',
-      projectPageUrl: '/projects/renewable-energy',
+      projectPageUrl: '#',
     },
     {
       id: 'ZCIP',
-      image: 'https://placehold.co/400x250/E0F2F7/000000?text=Educational+Support',
+      image: 'https://placehold.co/400x250/E0F2F7/000000?text=ZCIP',
       title: 'ZCIP',
       subtitle: 'Zonal Computational Intelligence Platform',
       description: 'ZCIP is GENA’s intelligent surveillance and analytics tool for tracking and combating antimicrobial resistance (AMR) across Africa. It integrates genomic data, clinical outcomes, and drug susceptibility patterns into a dynamic, AI-driven dashboard that supports early detection of resistance trends, hotspot mapping, and antimicrobial stewardship. ZCIP empowers researchers, policymakers, and healthcare systems with real-time, localized insights to inform targeted interventions and reduce the burden of AMR on the continent.',
-      projectPageUrl: '/projects/educational-support',
+      projectPageUrl: '#',
     },
     {
       id: 'OMNIA',
-      image: 'https://placehold.co/400x250/E0F2F7/000000?text=Water+Conservation',
+      image: 'https://placehold.co/400x250/E0F2F7/000000?text=OMNIA',
       title: 'OMNIA',
       subtitle: 'Omics Monitoring Network for Integrated Africa',
       description: 'OMNIA is GENA’s integrated genomic surveillance platform focused on high-priority viruses including Respiratory Syncytial Virus (RSV), SARS-CoV-2, Influenza, and Mpox. Beyond human pathogens, OMNIA extends into zoonotic spillover surveillance — monitoring viral evolution and interspecies transmission at the animal-human interface. By combining pathogen genomics, temporal patterns, and AI-powered analytics, OMNIA supports early outbreak detection, lineage tracking, and precision public health responses. It serves as a core infrastructure for epidemic intelligence and pandemic preparedness across Africa.',
-      projectPageUrl: '/projects/water-conservation',
+      projectPageUrl: '#',
     },
   ];
 
