@@ -1,15 +1,16 @@
 'use client';
 
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Hero() {
   return (
-    <section className="relative w-full h-[50vh] md:h-[80vh] overflow-hidden bg-gray-50 flex items-center justify-center">
+    <section className="relative w-full flex items-center justify-center pt-20">
       {/* Hero Background Image - Centered and Responsive */}
-      <div className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative w-full  mx-auto">
         <div className="relative w-full h-auto">
           <Image
-            src="/hero-bg.png"
+            src="/lab.jpg"
             alt="Gena Initiative - Powering Africa's Future Through Innovation"
             width={2000}
             height={1000}
@@ -21,18 +22,9 @@ export default function Hero() {
       
       {/* Floating "See More" Button */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10">
-        <button 
-          className="bg-[#1e3a5f] hover:bg-blue-[#1e3a5f] text-white px-8 py-3 rounded-md font-medium text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 animate-bounce"
-          onClick={() => {
-            // Scroll to next section or handle navigation
-            window.scrollTo({
-              top: window.innerHeight,
-              behavior: 'smooth'
-            });
-          }}
-        >
+        <Link href="/#about" className="bg-[#1e3a5f] hover:bg-blue-[#1e3a5f] text-white px-8 py-3 rounded-md font-medium text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 animate-bounce">
           See More
-        </button>
+        </Link>
       </div>
       
       {/* Scroll indicator */}

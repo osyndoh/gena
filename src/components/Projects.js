@@ -40,7 +40,7 @@ const Projects = () => {
   ];
 
   return (
-    <div className="font-sans antialiased text-gray-800 bg-gray-50 p-4 sm:p-6 lg:p-8">
+    <div id="projects" className="font-sans antialiased text-gray-800 bg-white p-4 sm:p-6 lg:p-8">
       <ProjectsSection projects={projectsData} />
     </div>
   );

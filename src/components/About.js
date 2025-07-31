@@ -2,7 +2,7 @@ import React from 'react';
 
 const About = () => {
   return (
-    <div className="font-sans antialiased text-gray-800 bg-gray-50 p-4 sm:p-6 lg:p-8">
+    <div id="about" className="font-sans antialiased text-gray-800 bg-white p-4 sm:p-6 lg:p-8">
       {/* Example usage of the Section component for "What We Do" */}
       <Section
         title="Who We Are"

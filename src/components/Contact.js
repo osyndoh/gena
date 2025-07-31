@@ -4,7 +4,7 @@ import React from 'react';
 // Main App component to demonstrate the ContactSection
 const Contact = () => {
   return (
-    <div className="font-sans antialiased text-gray-800 bg-gray-50 p-4 sm:p-6 lg:p-8">
+    <div id="contact" className="font-sans antialiased text-gray-800 bg-white p-4 sm:p-6 lg:p-8">
       <ContactSection />
     </div>
   );
