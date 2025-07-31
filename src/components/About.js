@@ -5,19 +5,19 @@ const About = () => {
     <div className="font-sans antialiased text-gray-800 bg-gray-50 p-4 sm:p-6 lg:p-8">
       {/* Example usage of the Section component for "What We Do" */}
       <Section
-        title="What We Do"
-        description="We focus on creating lasting change through community-led projects in education, environmental sustainability, and economic empowerment. Our approach combines local knowledge with global best practices to ensure effective and sustainable outcomes."
+        title="Who We Are"
+        description="Global Engine for Next-gen Analytics (GENA) is a frontier innovation platform advancing Africa’s healthcare ecosystem through genomics, Artificial Intelligence, and data-led solutions"
       />
 
       {/* Example usage of the Section component for "Mission and Vision" */}
       <Section
         title="Mission"
-        description="Our mission is to foster resilient communities by providing resources and support for self-sufficiency. We envision a world where every community thrives, equipped to meet its challenges and achieve its full potential."
+        description="To harness modern technology to deliver next-gen healthcare innovation in Africa, led locally, scaled globally."
       />
 
       <Section
         title="Vision"
-        description="Our mission is to foster resilient communities by providing resources and support for self-sufficiency. We envision a world where every community thrives, equipped to meet its challenges and achieve its full potential."
+        description="Strengthen Africa’s healthcare ecosystem via capacity building, expanded access to advanced technologies, real-time diseases surveillance, and predictive models"
       />
     </div>
   );
