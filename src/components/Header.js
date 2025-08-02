@@ -43,7 +43,7 @@ export default function Header() {
               Contact
             </Link>
             <Link
-              href="#"
+              href="/donate"
               className="bg-[#1e3a5f] text-white hover:bg-[#1e3a5f] px-4 py-2 rounded-md text-sm font-medium transition-colors duration-200"
             >
               Donate
@@ -89,8 +89,8 @@ export default function Header() {
               Contact
             </Link>
             <Link
-              href="#"
-              className="bg-[#1e3a5f] text-white hover:bg-[#1e3a5f] block px-3 py-2 rounded-md text-base font-medium"
+              href="/donate"
+              className="bg-[#1e3a5f] text-white hover:bg-[#1e3a5f] block w-full text-left px-3 py-2 rounded-md text-base font-medium"
             >
               Donate
             </Link>
