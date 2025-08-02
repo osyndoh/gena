@@ -8,6 +8,12 @@ export default function Donate() {
 
   const handleDonate = async (e) => {
     e.preventDefault();
+    
+    if (!amount || parseFloat(amount) <= 0) {
+      alert('Please enter a valid donation amount.');
+      return;
+    }
+    
     setIsDonating(true);
 
     try {
@@ -20,8 +26,8 @@ export default function Donate() {
           amount: amount,
           currency: 'KES',
           description: 'Donation to The Gena Initiative',
-          callback_url: `${process.env.NEXT_PUBLIC_APP_URL}/`,
-          notification_id: `${process.env.NEXT_PUBLIC_APP_URL}/api/pesapal/ipn`,
+          callback_url: `${window.location.origin}/`,
+          notification_id: `${window.location.origin}/api/pesapal/ipn`,
         }),
       });
 
