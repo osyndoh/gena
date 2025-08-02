@@ -1,4 +1,4 @@
-import { Pesapal } from "pesapaljs-v3";
+import Pesapal from "pesapaljs-v3";
 
 export async function POST(req) {
   try {
