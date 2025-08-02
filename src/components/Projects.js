@@ -1,5 +1,6 @@
 'use client'
 import React, { useState, useRef, useEffect } from 'react';
+import Image from 'next/image';
 
 // Main App component to demonstrate the ProjectsSection
 const Projects = () => {
@@ -40,7 +41,7 @@ const Projects = () => {
   ];
 
   return (
-    <div className="font-sans antialiased text-gray-800 bg-gray-50 p-4 sm:p-6 lg:p-8">
+    <div id="projects" className="font-sans antialiased text-gray-800 bg-white p-4 sm:p-6 lg:p-8">
       <ProjectsSection projects={projectsData} />
     </div>
   );
@@ -138,9 +139,11 @@ const ProjectCard = ({ project, onClick, isSelected, isAnyProjectSelected }) => 
     <div className={cardClasses} onClick={() => onClick(project)}>
       <div className="relative overflow-hidden">
         {/* Project Image */}
-        <img
+        <Image
           src={project.image}
           alt={project.title}
+          width={400}
+          height={250}
           className="w-full h-40 object-cover transform transition-transform duration-300 ease-in-out group-hover:scale-110"
           onError={(e) => { e.target.onerror = null; e.target.src = 'https://placehold.co/400x250/E0F2F7/000000?text=Image+Error'; }}
         />
