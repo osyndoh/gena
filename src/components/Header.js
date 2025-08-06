@@ -12,7 +12,10 @@ export default function Header() {
       <div className="mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo and Brand */}
-          <div className="flex items-center space-x-3">
+          <div
+            className="flex items-center space-x-3"
+            onClick={() => window.scroll(0, 0)}
+          >
             <Image
               src="/hero-bg.png"
               alt="Gena Initiative Logo"
