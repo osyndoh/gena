@@ -29,4 +29,14 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.carousel-root {
+  height: 100%;
+}
 
+.carousel .slider-wrapper, .carousel .slider {
+  height: 100%;
+}
+
+.carousel .slide {
+    height: 85vh;
+}
