@@ -1,41 +1,101 @@
+
 'use client';
 
 import Image from 'next/image';
-import Link from 'next/link';
+import { Carousel } from 'react-responsive-carousel';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 export default function Hero() {
   return (
     <section className="relative w-full min-h-[85vh] overflow-hidden">
-      {/* Hero Background Image - Full Section Coverage */}
-      <Image
-        src="/lab.jpg"
-        alt="Gena Initiative - Powering Africa's Future Through Innovation"
-        fill
-        className="object-cover"
-        priority
-      />
+      <Carousel
+        showThumbs={false}
+        showStatus={false}
+        infiniteLoop
+        autoPlay
+        interval={5000}
+        className="h-full w-full"
+      >
+        {/* Slide 1 */}
+        <div className="relative h-full">
+          <Image
+            src="/image.jpg"
+            alt="Gena Initiative - Image 1"
+            layout="fill"
+            objectFit="cover"
+            priority
+          />
+          <div className="absolute inset-0 bg-[#1e3a5f] opacity-50" />
+          <div className="absolute inset-0  bg-opacity-50 flex items-center">
+            <div className="relative z-10 w-full text-left px-4 sm:px-6 lg:px-8">
+              <div className="max-w-2xl">
+                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#fff]  mb-4">
+                   Capacity Building & Interoperability
+                </h1>
+                <p className="text-lg sm:text-xl lg:text-2xl text-[#fff]">
+                  Empowering local scientists and health professionals through targeted training, mentorship, and technology transfer.
+                </p>
+                <p className="text-lg sm:text-xl lg:text-2xl text-[#fff]">
+                  Seamlessly integrating GENA’s solutions into national health systems, global organizations, and open-source ecosystems.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
 
-      {/* Light overlay for better text readability */}
-      <div className="absolute inset-0 bg-black-900 bg-opacity-10"></div>
+        {/* Slide 2 */}
+        <div className="relative h-full">
+          <Image
+            src="/rna.png"
+            alt="Gena Initiative - Image 2"
+            layout="fill"
+            objectFit="cover"
+          />
+          <div className="absolute inset-0 bg-[#1e3a5f] opacity-50" />
+          <div className="absolute inset-0  bg-opacity-50 flex items-center">
+            <div className="relative z-10 w-full text-left px-4 sm:px-6 lg:px-8">
+              <div className="max-w-2xl">
+                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-4">
+                  Modular Design & Integrated Research & Development
+                </h1>
+                <p className="text-lg sm:text-xl lg:text-2xl text-white">
+                  Delivering a core AI + genomics engine with adaptable healthcare innovation modules to address diverse global health challenges.
+                </p>
+                <p className="text-lg sm:text-xl lg:text-2xl text-white">
+                  Creating platforms that promote collaborative research on pathogens of global health significance, vector biology, GIS & climate data, and policy integration
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
 
-      {/* Content Container */}
-      <div className="relative z-10 w-full h-full flex items-center justify-center pt-20 pb-16 px-4 sm:px-6 lg:px-8">
-        {/* Add your hero content here if needed */}
-      </div>
-
-      {/* Floating "See More" Button */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20">
-        <Link href="/#about" className="bg-[#1e3a5f] hover:bg-[#2a4a6b] text-white px-8 py-3 rounded-md font-medium text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 animate-bounce">
-          See More
-        </Link>
-      </div>
-
-      {/* Scroll indicator */}
-      {/* <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2 z-10">
-    <div className="w-6 h-10 border-2 border-blue-900 rounded-full flex justify-center">
-      <div className="w-1 h-3 bg-blue-900 rounded-full mt-2 animate-pulse"></div>
-    </div>
-  </div> */}
+        {/* Slide 3 */}
+        <div className="relative h-full">
+          <Image
+            src="/worlddata.png"
+            alt="Gena Initiative - Image 2"
+            layout="fill"
+            objectFit="cover"
+          />
+          <div className="absolute inset-0 bg-[#1e3a5f] opacity-50" />
+          <div className="absolute inset-0  bg-opacity-50 flex items-center">
+            <div className="relative z-10 w-full text-left px-4 sm:px-6 lg:px-8">
+              <div className="max-w-2xl">
+                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-4">
+                  Data Equity & Public–Private Collaboration
+                </h1>
+                <p className="text-lg sm:text-xl lg:text-2xl text-white">
+                  Championing LMIC data ownership and benefit-sharing via transparent, inclusive platforms.
+                </p>
+                <p className="text-lg sm:text-xl lg:text-2xl text-white">
+                  Acting as a trusted, neutral bridge between governments, academia, and the private sector to drive sustainable health innovation.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </Carousel>
     </section>
   );
 }
+          
