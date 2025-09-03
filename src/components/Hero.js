@@ -30,13 +30,22 @@ export default function Hero() {
             <div className="relative z-10 w-full text-left px-4 sm:px-6 lg:px-8">
               <div className="max-w-2xl">
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#fff]  mb-4">
-                   Capacity Building & Interoperability
+                  Healthcare
                 </h1>
                 <p className="text-lg sm:text-xl lg:text-2xl text-[#fff]">
-                  Empowering local scientists and health professionals through targeted training, mentorship, and technology transfer.
+                  1. Infectious disease management, surveillance, and predictive tools.
                 </p>
                 <p className="text-lg sm:text-xl lg:text-2xl text-[#fff]">
-                  Seamlessly integrating GENA’s solutions into national health systems, global organizations, and open-source ecosystems.
+                  2. Research training, capacity building, and innovation in genomics, proteomics, drug discovery, and antimicrobial resistance modeling — powered by Artificial Intelligence, Machine Learning, and Web3.
+                </p>
+                <p className="text-lg sm:text-xl lg:text-2xl text-[#fff]">
+                  3. Maternal and child health solutions to improve outcomes and reduce health inequities. 
+                </p>
+                <p className="text-lg sm:text-xl lg:text-2xl text-[#fff]">
+                  4. AI and Machine Learning applications in cancer genomics, patient management, and outcome optimization.
+                </p>
+                <p className="text-lg sm:text-xl lg:text-2xl text-[#fff]">
+                  5. Strengthening health systems through advanced data management, interoperability, and secure data sharing.
                 </p>
               </div>
             </div>
@@ -46,7 +55,7 @@ export default function Hero() {
         {/* Slide 2 */}
         <div className="relative h-full">
           <Image
-            src="/rna.png"
+            src="/education.png"
             alt="Gena Initiative - Image 2"
             layout="fill"
             objectFit="cover"
@@ -56,13 +65,13 @@ export default function Hero() {
             <div className="relative z-10 w-full text-left px-4 sm:px-6 lg:px-8">
               <div className="max-w-2xl">
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-4">
-                  Modular Design & Integrated Research & Development
+                  Education
                 </h1>
                 <p className="text-lg sm:text-xl lg:text-2xl text-white">
-                  Delivering a core AI + genomics engine with adaptable healthcare innovation modules to address diverse global health challenges.
+                  1. Training and capacity building through innovative edtech platforms.
                 </p>
                 <p className="text-lg sm:text-xl lg:text-2xl text-white">
-                  Creating platforms that promote collaborative research on pathogens of global health significance, vector biology, GIS & climate data, and policy integration
+                  2. Equality-driven innovation that ensures inclusive access to knowledge and opportunities.
                 </p>
               </div>
             </div>
@@ -72,7 +81,7 @@ export default function Hero() {
         {/* Slide 3 */}
         <div className="relative h-full">
           <Image
-            src="/worlddata.png"
+            src="/agriculture.png"
             alt="Gena Initiative - Image 2"
             layout="fill"
             objectFit="cover"
@@ -82,13 +91,16 @@ export default function Hero() {
             <div className="relative z-10 w-full text-left px-4 sm:px-6 lg:px-8">
               <div className="max-w-2xl">
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-4">
-                  Data Equity & Public–Private Collaboration
+                  Agriculture
                 </h1>
                 <p className="text-lg sm:text-xl lg:text-2xl text-white">
-                  Championing LMIC data ownership and benefit-sharing via transparent, inclusive platforms.
+                  1. Application of genomics, AI, and biotechnology for crop improvement, sustainable farming, and food security.
                 </p>
                 <p className="text-lg sm:text-xl lg:text-2xl text-white">
-                  Acting as a trusted, neutral bridge between governments, academia, and the private sector to drive sustainable health innovation.
+                  2. Data-driven agricultural innovation to predict, prevent, and manage plant and animal diseases.
+                </p>
+                <p className="text-lg sm:text-xl lg:text-2xl text-white">
+                  3. Building capacity in agri-biotech research and technology transfer for resilient communities.
                 </p>
               </div>
             </div>
@@ -98,4 +110,3 @@ export default function Hero() {
     </section>
   );
 }
-          
