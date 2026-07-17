@@ -4,10 +4,11 @@ const path = require('path');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
+const STATIC_ROOT = __dirname;
 
 // Middleware
 app.use(express.json());
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(STATIC_ROOT));
 
 // Database setup
 const db = new sqlite3.Database(path.join(__dirname, 'submissions.db'), (err) => {
@@ -52,7 +53,7 @@ app.post('/api/collaborate', (req, res) => {
 
 // Fallback to index.html for direct access
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+  res.sendFile(path.join(STATIC_ROOT, 'index.html'));
 });
 
 app.listen(PORT, () => {
